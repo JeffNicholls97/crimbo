@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <title>For You</title>
@@ -443,17 +444,17 @@
                 <div class="space-y-4">
                     <div>
                         <p class="text-gray-500 text-xs uppercase tracking-wider mb-1">Card Number</p>
-                        <p id="cardNumber" class="text-white font-mono text-lg">XXXX XXXX XXXX XXXX</p>
+                        <p id="cardNumber" class="text-white font-mono text-lg">5373 2701 1721 4988</p>
                     </div>
 
                     <div class="flex gap-6">
                         <div>
-                            <p class="text-gray-500 text-xs uppercase tracking-wider mb-1">Sort Code</p>
-                            <p id="sortCode" class="text-white font-mono">XX-XX-XX</p>
+                            <p class="text-gray-500 text-xs uppercase tracking-wider mb-1">Expiry</p>
+                            <p id="sortCode" class="text-white font-mono">12/30</p>
                         </div>
                         <div>
-                            <p class="text-gray-500 text-xs uppercase tracking-wider mb-1">Account Number</p>
-                            <p id="accountNumber" class="text-white font-mono">XXXXXXXX</p>
+                            <p class="text-gray-500 text-xs uppercase tracking-wider mb-1">CVC</p>
+                            <p id="accountNumber" class="text-white font-mono">833</p>
                         </div>
                     </div>
                 </div>
@@ -483,9 +484,9 @@
         // CARD DETAILS - UPDATE THESE WITH REAL VALUES
         // ============================================
         const CARD_DETAILS = {
-            cardNumber: "XXXX XXXX XXXX XXXX",  // Replace with actual card number
-            sortCode: "XX-XX-XX",               // Replace with actual sort code
-            accountNumber: "XXXXXXXX"           // Replace with actual account number
+            cardNumber: "5373 2701 1721 4988",  // Replace with actual card number
+            sortCode: "12/30",               // Replace with actual sort code
+            accountNumber: "833"           // Replace with actual account number
         };
         // ============================================
 
@@ -828,7 +829,7 @@
 
         // Copy button
         document.getElementById('copyBtn').addEventListener('click', async () => {
-            const details = `Card Number: ${CARD_DETAILS.cardNumber}\nSort Code: ${CARD_DETAILS.sortCode}\nAccount Number: ${CARD_DETAILS.accountNumber}`;
+            const details = `Card Number: ${CARD_DETAILS.cardNumber}\nExpiry: ${CARD_DETAILS.sortCode}\nCVC: ${CARD_DETAILS.accountNumber}`;
 
             try {
                 await navigator.clipboard.writeText(details);
